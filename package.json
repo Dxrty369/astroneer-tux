@@ -5,7 +5,7 @@
         "update_url": null
     },
     "exported_at": "2026-10-05T00:00:00+02:00",
-    "name": "Astroneer Dedicated Server (AstroTuxLauncher)",
+    "name": "Astroneer AstroTuxLauncher",
     "author": "support@pterodactyl.io",
     "description": "Astroneer dedicated server managed by AstroTuxLauncher: RCON console, player monitoring, Discord/ntfy notifications and graceful saves.",
     "features": null,
@@ -15,7 +15,7 @@
     "file_denylist": [],
     "startup": "astrotux-entrypoint.sh",
     "config": {
-        "files": "{\r\n    \"AstroneerServer\\/Astro\\/Saved\\/Config\\/WindowsServer\\/Engine.ini\": {\r\n        \"parser\": \"ini\",\r\n        \"find\": {\r\n            \"url.Port\": \"{{server.build.default.port}}\",\r\n            \"[SystemSettings].net.AllowEncryption\": \"false\"\r\n        }\r\n    },\r\n    \"AstroneerServer\\/Astro\\/Saved\\/Config\\/WindowsServer\\/AstroServerSettings.ini\": {\r\n        \"parser\": \"ini\",\r\n        \"find\": {\r\n            \"[\\/Script\\/Astro.AstroServerSettings].PublicIP\": \"{{env.PUBLIC_IP}}\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].OwnerName\": \"{{env.OWNER_NAME}}\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].OwnerGuid\": \"{{env.OWNER_GUID}}\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].PlayerProperties\": \"(PlayerFirstJoinName=\\\"{{env.OWNER_NAME}}\\\",PlayerCategory=Admin,PlayerGuid=\\\"{{env.OWNER_GUID}}\\\",PlayerRecentJoinName=\\\"\\\")\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].ServerPassword\": \"{{env.SERVER_PWD}}\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].ServerName\": \"{{env.SERVER_NAME}}\"\r\n        }\r\n    }\r\n}",
+        "files": "{\r\n    \"AstroneerServer\\/Astro\\/Saved\\/Config\\/WindowsServer\\/Engine.ini\": {\r\n        \"parser\": \"ini\",\r\n        \"find\": {\r\n            \"[URL].Port\": \"{{server.build.default.port}}\",\r\n            \"[SystemSettings].net.AllowEncryption\": \"false\"\r\n        }\r\n    },\r\n    \"AstroneerServer\\/Astro\\/Saved\\/Config\\/WindowsServer\\/AstroServerSettings.ini\": {\r\n        \"parser\": \"ini\",\r\n        \"find\": {\r\n            \"[\\/Script\\/Astro.AstroServerSettings].PublicIP\": \"{{env.PUBLIC_IP}}\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].OwnerName\": \"{{env.OWNER_NAME}}\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].OwnerGuid\": \"{{env.OWNER_GUID}}\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].PlayerProperties\": \"(PlayerFirstJoinName=\\\"{{env.OWNER_NAME}}\\\",PlayerCategory=Admin,PlayerGuid=\\\"{{env.OWNER_GUID}}\\\",PlayerRecentJoinName=\\\"\\\")\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].ServerPassword\": \"{{env.SERVER_PWD}}\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].ServerName\": \"{{env.SERVER_NAME}}\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \"Dedicated Server ready!\"\r\n}",
         "stop": "^C"
     },
