@@ -19,8 +19,9 @@ RUN curl -fsSL -o /usr/local/bin/astrotux-launcher \
     && echo "${LAUNCHER_SHA256}  /usr/local/bin/astrotux-launcher" | sha256sum -c - \
     && chmod +x /usr/local/bin/astrotux-launcher
 
+COPY src/docker-entrypoint.sh /entrypoint.sh
 COPY src/entrypoint.sh /usr/local/bin/astrotux-entrypoint.sh
-RUN chmod +x /usr/local/bin/astrotux-entrypoint.sh
+RUN chmod +x /entrypoint.sh /usr/local/bin/astrotux-entrypoint.sh
 
 USER container
 WORKDIR /home/container

@@ -34,8 +34,7 @@
             "default_value": "Astroneer Dedicated Server",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|max:60",
-            "field_type": "text"
+            "rules": "required|string|max:60"
         },
         {
             "name": "Server Owner Name",
@@ -44,8 +43,7 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|max:60",
-            "field_type": "text"
+            "rules": "required|string|max:60"
         },
         {
             "name": "Server Owner SteamID",
@@ -54,8 +52,7 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|numeric|min:17|max:20",
-            "field_type": "text"
+            "rules": "required|numeric|min:17|max:20"
         },
         {
             "name": "Server Password",
@@ -64,8 +61,7 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|alpha_dash|between:1,100",
-            "field_type": "text"
+            "rules": "nullable|alpha_dash|between:1,100"
         },
         {
             "name": "Public IP",
@@ -74,8 +70,7 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|ip",
-            "field_type": "text"
+            "rules": "nullable|ip"
         },
         {
             "name": "Automatic Server Updates",
@@ -84,8 +79,7 @@
             "default_value": "1",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|boolean",
-            "field_type": "text"
+            "rules": "required|boolean"
         },
         {
             "name": "Overwrite Public IP",
@@ -94,8 +88,7 @@
             "default_value": "0",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|boolean",
-            "field_type": "text"
+            "rules": "required|boolean"
         },
         {
             "name": "Debug Logging",
@@ -104,8 +97,7 @@
             "default_value": "1",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|boolean",
-            "field_type": "text"
+            "rules": "required|boolean"
         },
         {
             "name": "Network Check",
@@ -114,8 +106,7 @@
             "default_value": "0",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|boolean",
-            "field_type": "text"
+            "rules": "required|boolean"
         },
         {
             "name": "Notification Method",
@@ -124,8 +115,7 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|in:discord,ntfy",
-            "field_type": "text"
+            "rules": "nullable|in:discord,ntfy"
         },
         {
             "name": "Discord Webhook URL",
@@ -134,8 +124,7 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|url",
-            "field_type": "text"
+            "rules": "nullable|url"
         },
         {
             "name": "ntfy Topic",
@@ -144,8 +133,7 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|string|max:100",
-            "field_type": "text"
+            "rules": "nullable|string|max:100"
         },
         {
             "name": "Uptime Kuma Push URL",
@@ -154,28 +142,7 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|url",
-            "field_type": "text"
-        },
-        {
-            "name": "Panel SteamCMD Update",
-            "description": "Must stay 0. The base image runs its own steamcmd when this is 1, which conflicts with the launcher's updater.",
-            "env_variable": "AUTO_UPDATE",
-            "default_value": "0",
-            "user_viewable": false,
-            "user_editable": false,
-            "rules": "required|string|max:5",
-            "field_type": "text"
-        },
-        {
-            "name": "Steam App ID",
-            "description": "",
-            "env_variable": "SRCDS_APPID",
-            "default_value": "728470",
-            "user_viewable": false,
-            "user_editable": false,
-            "rules": "required|numeric",
-            "field_type": "text"
+            "rules": "nullable|url"
         }
     ]
 }
