@@ -100,7 +100,7 @@
         },
         {
             "name": "Debug Logging",
-            "description": "Required for the server output to appear in the console. Disable only to reduce noise (1 Enable | 0 Disable).",
+            "description": "Include DEBUG-level messages in the console and log file. Disable to reduce noise (1 Enable | 0 Disable).",
             "env_variable": "LOG_DEBUG",
             "default_value": "1",
             "user_viewable": true,
