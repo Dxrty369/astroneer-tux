@@ -17,6 +17,7 @@
     "config": {
         "files": "{\r\n    \"AstroneerServer\\/Astro\\/Saved\\/Config\\/WindowsServer\\/Engine.ini\": {\r\n        \"parser\": \"ini\",\r\n        \"find\": {\r\n            \"[URL].Port\": \"{{server.build.default.port}}\",\r\n            \"[SystemSettings].net.AllowEncryption\": \"false\"\r\n        }\r\n    },\r\n    \"AstroneerServer\\/Astro\\/Saved\\/Config\\/WindowsServer\\/AstroServerSettings.ini\": {\r\n        \"parser\": \"ini\",\r\n        \"find\": {\r\n            \"[\\/Script\\/Astro.AstroServerSettings].PublicIP\": \"{{env.PUBLIC_IP}}\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].OwnerName\": \"{{env.OWNER_NAME}}\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].OwnerGuid\": \"{{env.OWNER_GUID}}\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].PlayerProperties\": \"(PlayerFirstJoinName=\\\"{{env.OWNER_NAME}}\\\",PlayerCategory=Admin,PlayerGuid=\\\"{{env.OWNER_GUID}}\\\",PlayerRecentJoinName=\\\"\\\")\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].ServerPassword\": \"{{env.SERVER_PWD}}\",\r\n            \"[\\/Script\\/Astro.AstroServerSettings].ServerName\": \"{{env.SERVER_NAME}}\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \"Dedicated Server ready!\"\r\n}",
+        "logs": "{}",
         "stop": "^C"
     },
     "scripts": {
@@ -34,7 +35,8 @@
             "default_value": "Astroneer Dedicated Server",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|max:60"
+            "rules": "required|string|max:60",
+            "field_type": "text"
         },
         {
             "name": "Server Owner Name",
@@ -43,7 +45,8 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|max:60"
+            "rules": "required|string|max:60",
+            "field_type": "text"
         },
         {
             "name": "Server Owner SteamID",
@@ -52,7 +55,8 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|numeric|min:17|max:20"
+            "rules": "required|numeric|digits_between:17,20",
+            "field_type": "text"
         },
         {
             "name": "Server Password",
@@ -61,7 +65,8 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|alpha_dash|between:1,100"
+            "rules": "nullable|alpha_dash|between:1,100",
+            "field_type": "text"
         },
         {
             "name": "Public IP",
@@ -70,7 +75,8 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|ip"
+            "rules": "nullable|ip",
+            "field_type": "text"
         },
         {
             "name": "Automatic Server Updates",
@@ -79,7 +85,8 @@
             "default_value": "1",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|boolean"
+            "rules": "required|boolean",
+            "field_type": "text"
         },
         {
             "name": "Overwrite Public IP",
@@ -88,7 +95,8 @@
             "default_value": "0",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|boolean"
+            "rules": "required|boolean",
+            "field_type": "text"
         },
         {
             "name": "Debug Logging",
@@ -97,7 +105,8 @@
             "default_value": "1",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|boolean"
+            "rules": "required|boolean",
+            "field_type": "text"
         },
         {
             "name": "Network Check",
@@ -106,7 +115,8 @@
             "default_value": "0",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|boolean"
+            "rules": "required|boolean",
+            "field_type": "text"
         },
         {
             "name": "Notification Method",
@@ -115,7 +125,8 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|in:discord,ntfy"
+            "rules": "nullable|in:discord,ntfy",
+            "field_type": "text"
         },
         {
             "name": "Discord Webhook URL",
@@ -124,7 +135,8 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|url"
+            "rules": "nullable|url",
+            "field_type": "text"
         },
         {
             "name": "ntfy Topic",
@@ -133,7 +145,8 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|string|max:100"
+            "rules": "nullable|string|max:100",
+            "field_type": "text"
         },
         {
             "name": "Uptime Kuma Push URL",
@@ -142,7 +155,8 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|url"
+            "rules": "nullable|url",
+            "field_type": "text"
         }
     ]
 }
